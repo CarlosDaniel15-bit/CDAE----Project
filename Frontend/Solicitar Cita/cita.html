@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Padres - Escritorio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="puebra.css">
+</head>
+<body>
+    
+    <div class="app-container">
+        
+        <header class="header">
+            <div class="saludo">
+                <h1>Familia Usuario</h1>
+                <p>Portal de Tutor</p>
+            </div>
+            <form action="inicio.html">
+                <button class="btn-logout"><i class='bx bx-log-out'></i> Salir de la sesión</button>
+            </form>
+        </header>
+
+        <div class="dashboard-grid">
+            
+            <div class="columna-principal">
+                <section class="info-hijo">
+                    <div class="hijo-card">
+                        <div class="info-texto">
+                            <h2>Carlos Villarreal</h2>
+                            <p><i class='bx bx-book-reader'></i> Nivel: 3ro de primaria</p>
+                        </div>
+                        <i class='bx bxs-user-rectangle icono-grande'></i>
+                    </div>
+                </section>
+
+                <button class="btn-agendar" onclick="alert('Bro todavia no pones eso, dale calmado...')">
+                    <i class='bx bx-plus-circle'></i> Solicitar nueva cita
+                </button>
+            </div>
+
+            <div class="columna-secundaria">
+                <section class="proxima-clase">
+                    <h3>Próxima Sesión Programada</h3>
+                    <div class="clase-card">
+                        <div class="icono-fecha">
+                            <i class='bx bx-calendar-event'></i>
+                        </div>
+                        <div class="datos-clase">
+                            <h4>Jueves, 26 de Marzo</h4>
+                            <p>4:00 PM - 5:00 PM</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="estado-pagos">
+                    <h3>Estado de Cuenta Financiero</h3>
+                    <div class="pago-card ok">
+                        <i class='bx bx-check-shield'></i>
+                        <div class="pago-detalles">
+                            <span class="titulo-pago">Mes de Marzo</span>
+                            <span class="estatus">Pagado y al corriente</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+        </div>
+    </div>
+
+    <footer>
+        <div class="info_contacto">
+            <h2>¿Dudas? Contacta con nosotros:</h2>
+            <a href="https://www.instagram.com/p/CjbsqAyOJAF/?igsh=MTd5M2hnZHZoNDhvdA==" target="_blank" class="btn-instagram">
+                <i class='bx bxl-instagram'></i> Instagram
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>
