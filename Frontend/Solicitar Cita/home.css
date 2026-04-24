@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #cddbea, #6e99c2);
+    display: flex;
+    flex-direction: column; /* Para que el footer se quede abajo */
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px 0 20px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 1100px; /* Ancho de computadora */
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    padding: 40px 50px;
+    flex-grow: 1; /* Hace que el contenedor ocupe el espacio disponible */
+    margin-bottom: 30px;
+}
+
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f4f8;
+}
+
+.saludo h1 { font-size: 28px; color: #333; }
+.saludo p { font-size: 16px; color: #7494ec; font-weight: 600; margin-top: 5px; }
+
+.btn-logout { 
+    background: #fef2f2; 
+    border: 1px solid #fecaca; 
+    color: #e74c3c; 
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 15px; 
+    cursor: pointer; 
+    font-weight: 600; 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.btn-logout:hover {
+    background: #fee2e2;
+}
+
+.btn-logout i { font-size: 20px; }
+
+/* Grid del Dashboard */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide en dos columnas */
+    gap: 40px;
+}
+
+/* Títulos de sección */
+h3 { font-size: 18px; color: #555; margin-bottom: 15px; border-bottom: 1px dashed #eee; padding-bottom: 8px; }
+
+/* Tarjeta del Hijo (Destacada) */
+.hijo-card {
+    background: linear-gradient(135deg, #365d87, #2c4c6e);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(54, 93, 135, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hijo-card h2 { font-size: 28px; margin-bottom: 10px; }
+.hijo-card p { font-size: 16px; display: flex; align-items: center; gap: 8px; opacity: 0.9; }
+.icono-grande { font-size: 60px; opacity: 0.3; }
+
+/* Tarjeta de Próxima Clase */
+.clase-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #f9fbfd;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e1e8f0;
+    border-left: 5px solid #7494ec;
+    margin-bottom: 30px;
+}
+
+.icono-fecha {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.icono-fecha i { font-size: 38px; color: #7494ec; }
+.datos-clase h4 { font-size: 18px; color: #333; margin-bottom: 5px; }
+.datos-clase p { font-size: 15px; color: #666; }
+
+/* Tarjeta de Pago */
+.pago-card.ok {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #c8e6c9;
+}
+
+.pago-card.ok i { font-size: 32px; }
+.pago-detalles { display: flex; flex-direction: column; }
+.titulo-pago { font-size: 16px; font-weight: 700; }
+.estatus { font-size: 14px; opacity: 0.9; }
+
+/* Botón de Agendar */
+.btn-agendar {
+    width: 100%;
+    padding: 18px;
+    background: #7494ec;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(116, 148, 236, 0.3);
+}
+
+.btn-agendar:hover { background: #5c7bce; transform: translateY(-2px); }
+
+/* Footer */
+footer {
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 20px;
+}
+
+.info_contacto {
+    background: #365d87;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.info_contacto h2 { font-size: 18px; font-weight: 500; }
+
+.btn-instagram {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn-instagram:hover { background: rgba(255,255,255,0.2); }
+.btn-instagram i { font-size: 24px; }
