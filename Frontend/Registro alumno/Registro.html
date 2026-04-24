@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Nuevo Alumno</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="titulo-nav">
+                <form action="prueba.html">
+                    <button class="btn-back"><i class='bx bx-chevron-left'></i> Volver</button>
+                    <h1>Nuevo Registro de Alumno</h1>
+                </form>
+            </div>
+            <p class="subtitulo">Completa la información para dar de alta a un nuevo estudiante en el sistema.</p>
+        </header>
+
+        <form class="registro-form" action="#" onsubmit="event.preventDefault(); alert('Datos listos para enviar al backend');">
+            
+            <div class="columnas-desktop">
+                <div class="seccion-formulario">
+                    <h2><i class='bx bx-child'></i> Datos del Niño</h2>
+                    
+                    <div class="input-group">
+                        <label>Nombre Completo</label>
+                        <input type="text" placeholder="Ej. Juan Pérez" required>
+                    </div>
+
+                    <div class="input-fila">
+                        <div class="input-group">
+                            <label>Edad</label>
+                            <input type="number" placeholder="Ej. 8" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Nivel Escolar</label>
+                            <select required>
+                                <option value="">Selecciona...</option>
+                                <option value="kínder">Kínder</option>
+                                <option value="primaria">Primaria</option>
+                                <option value="secundaria">Secundaria</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Aptitudes / Necesidades Especiales</label>
+                        <textarea rows="4" placeholder="Ej. Dificultad con la lectura, TDAH, etc."></textarea>
+                    </div>
+                </div>
+
+                <div class="seccion-formulario">
+                    <h2><i class='bx bx-user-pin'></i> Datos del Tutor</h2>
+                    
+                    <div class="input-group">
+                        <label>Nombre del Padre/Tutor</label>
+                        <input type="text" placeholder="Ej. María López" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Número de Contacto (Emergencias)</label>
+                        <input type="tel" placeholder="Ej. 687 123 4567" required>
+                    </div>
+                    
+                    <div class="nota-informativa">
+                        <i class='bx bx-info-circle'></i>
+                        <p>Los datos de contacto son confidenciales y solo serán visibles para la administradora de la institución.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="botones-accion">
+                <button type="button" class="btn-secundario"><i class='bx bx-plus'></i> Guardar y agregar otro</button>
+                <button type="submit" class="btn-primario"><i class='bx bx-save'></i> Finalizar Registro</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
