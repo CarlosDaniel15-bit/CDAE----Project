@@ -8,6 +8,6 @@
 > [GitHub Pull Requests](#-This extension allows you to review and manage GitHub pull requests and issues in Visual Studio Code.)
 > [GitLens — Git supercharged](#-Enhance your workflows with powerful Git functionality like in-editor blame annotations)
 
-
+<br>
 >[!WARNING]
 >It's very likely that we will have some HTML styling issues. This is because a few files had nonsensical names. For this reason, I renamed a group of files on git.
