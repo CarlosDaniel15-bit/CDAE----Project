@@ -10,4 +10,4 @@
 
 
 >[!WARNING]
->Puede haber problemas porque el archivo que tiene algunos archivos tiene diferente el nombre el aqui en el git, lo cambie porqu le tenia puesto nombres que no tenian relacion con el archivo.
+>It's very likely that we will have some HTML styling issues. This is because a few files had nonsensical names. For this reason, I renamed a group of files on git.
