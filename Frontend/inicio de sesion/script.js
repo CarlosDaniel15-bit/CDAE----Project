@@ -12,3 +12,29 @@ btn_register.addEventListener('click', () => {
 btn_login.addEventListener('click', () => {
     contenedor.classList.remove('active');
 }) 
+
+document.querySelector(".form-log_in form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const correo = document.querySelector(".form-log_in input[type='email']").value;
+    const password = document.querySelector(".form-log_in input[type='password']").value;
+
+    const respuesta = await fetch("http://localhost:3000/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            correo,
+            password
+        })
+    });
+
+    const data = await respuesta.text();
+
+    if (data === "Login correcto") {
+        window.location.href = "../Home_pagina/home.html";
+    } else {
+        alert(data);
+    }
+});
