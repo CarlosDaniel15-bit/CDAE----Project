@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jp ceo y nacho disque backend</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="/inicio_sesion/inicio.css">
 </head>
 <body>
     <div class="contenedor">
         <div class="form-log_in">
-            <form>
+            <form action="../Home_pagina/home.html">
                 <h2>Iniciar sesion</h2>
                 <div class="input-box">
                     <input type="text" id="correo" placeholder="Correo" required>  
@@ -35,7 +35,7 @@
         </div>
 
         <div class="form-signup">
-            <form>
+            <form action="../Home_pagina/home.html">
                 <h2>Registrarse</h2>
                 <div class="input-box">
                     <input type="text" id="nombre" placeholder="Nombre" required>
@@ -74,7 +74,7 @@
         </div>
     </div>
     
-    <script src="script.js"></script>
+    <script src="/inicio_sesion/script.js"></script>
     <script>
 document.querySelector(".form-log_in form").addEventListener("submit", function(e) {
   e.preventDefault();
@@ -93,7 +93,7 @@ document.querySelector(".form-log_in form").addEventListener("submit", function(
   .then(data => {
     if (data.success) {
       alert("Login correcto");
-      window.location.href = "home.html";
+      window.location.href = "../Home_pagina/home.html";
     } else {
       alert("Datos incorrectos");
     }
