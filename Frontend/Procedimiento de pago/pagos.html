@@ -8,115 +8,61 @@
     <link rel="stylesheet" href="pagos.css">
 </head>
 <body>
-    <div class="app-container">
-        <header class="header">
-            <div class="titulo-nav">
-                <form action="prueba.html">
-                    <button class="btn-back"><i class='bx bx-chevron-left'></i> Volver</button>
-                    <h1>Control y Historial de Pagos</h1>
-                </form>
+    <div class="main-wrapper"> 
+        
+        <nav class="sidebar">
+            <div class="logo-details">
+                <i class='bx bxs-school'></i>
+                <span class="logo_name">Control Escolar</span>
             </div>
-            <p class="subtitulo">Consulta los ingresos del mes y el estado de cuenta de cada tutor[cite: 35].</p>
-        </header>
+            <ul class="nav-links">
+                <li><a href="/Home_pagina/home.html"><i class='bx bx-home-alt'></i><span>Inicio</span></a></li>
+                <li><a href="#"><i class='bx bx-group'></i><span>Alumnos</span></a></li>
+                <li><a href="pagos.html" class="active"><i class='bx bx-money'></i><span>Pagos</span></a></li>
+                <li><a href="#"><i class='bx bx-calendar'></i><span>Agenda</span></a></li>
+            </ul>
+        </nav>
 
-        <div class="controles-superiores">
-            <div class="buscador">
-                <i class='bx bx-search'></i>
-                <input type="text" placeholder="Buscar alumno o tutor...">
-            </div>
-            
-            <div class="resumen-pagos">
-                <div class="caja-resumen ingresos">
-                    <i class='bx bx-trending-up'></i>
-                    <div>
-                        <p>Ingresos (Marzo)</p>
-                        <h3>$4,500</h3>
+        <main class="main-content">
+            <div class="app-container">
+                <header class="header">
+                    <div class="titulo-nav">
+                        <form action="/Home_pagina/home.html">
+                            <button class="btn-back"><i class='bx bx-chevron-left'></i> Volver</button>
+                        </form>
+                        <h1>Control y Historial de Pagos</h1>
+                    </div>
+                    <p class="subtitulo">Consulta los ingresos del mes y el estado de cuenta de cada tutor.</p>
+                </header>
+
+                <div class="controles-superiores">
+                    <div class="buscador">
+                        <i class='bx bx-search'></i>
+                        <input type="text" placeholder="Buscar alumno...">
+                    </div>
+                    
+                    <div class="resumen-pagos">
+                        <div class="caja-resumen ingresos">
+                            <i class='bx bx-trending-up'></i>
+                            <div>
+                                <p>Ingresos (Marzo)</p>
+                                <h3>$4,500</h3>
+                            </div>
+                        </div>
+                        <div class="caja-resumen pendientes">
+                            <i class='bx bx-error-circle'></i>
+                            <div>
+                                <p>Por cobrar</p>
+                                <h3>2 Pendientes</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="caja-resumen pendientes">
-                    <i class='bx bx-error-circle'></i>
-                    <div>
-                        <p>Por cobrar</p>
-                        <h3>2 Pendientes</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <section class="historial-lista">
-            <h2>Historial Reciente</h2>
-
-            <div class="encabezados-tabla">
-                <span>Tutor y Alumno</span>
-                <span>Periodo / Fecha</span>
-                <span>Monto y Estado</span>
-                <span>Acciones</span>
-            </div>
-
-            <div class="pago-card">
-                <div class="columna-info">
-                    <div class="tutor-icono"><i class='bx bx-user'></i></div>
-                    <div class="detalles">
-                        <h4>María López</h4>
-                        <p>Alumno: Juan Pérez</p>
-                    </div>
-                </div>
-                <div class="columna-fecha">
-                    <span class="fecha">20 de Marzo, 2026</span>
-                    <p class="tipo-pago">Pago Semanal</p>
-                </div>
-                <div class="columna-estado">
-                    <span class="monto">$500</span>
-                    <span class="badge pagado">Pagado</span>
-                </div>
-                <div class="columna-acciones">
-                    <button class="btn-icono" title="Ver recibo"><i class='bx bx-receipt'></i></button>
-                </div>
-            </div>
-
-            <div class="pago-card pendiente-card">
-                <div class="columna-info">
-                    <div class="tutor-icono"><i class='bx bx-user'></i></div>
-                    <div class="detalles">
-                        <h4>Carlos Ruiz</h4>
-                        <p>Alumno: Mateo Ruiz</p>
-                    </div>
-                </div>
-                <div class="columna-fecha">
-                    <span class="fecha">Semana del 23 al 27</span>
-                    <p class="tipo-pago">Pago Semanal</p>
-                </div>
-                <div class="columna-estado">
-                    <span class="monto">$500</span>
-                    <span class="badge pendiente">Pendiente</span>
-                </div>
-                <div class="columna-acciones">
-                    <button class="btn-registrar-pago"><i class='bx bx-check-double'></i> Marcar Pagado</button>
-                </div>
-            </div>
-
-            <div class="pago-card">
-                <div class="columna-info">
-                    <div class="tutor-icono"><i class='bx bx-user'></i></div>
-                    <div class="detalles">
-                        <h4>Ana Gómez</h4>
-                        <p>Alumno: Sofía Martínez</p>
-                    </div>
-                </div>
-                <div class="columna-fecha">
-                    <span class="fecha">15 de Marzo, 2026</span>
-                    <p class="tipo-pago">Mes Completo</p>
-                </div>
-                <div class="columna-estado">
-                    <span class="monto">$1,200</span>
-                    <span class="badge pagado">Pagado (Mes)</span>
-                </div>
-                <div class="columna-acciones">
-                    <button class="btn-icono" title="Ver recibo"><i class='bx bx-receipt'></i></button>
-                </div>
-            </div>
-
-        </section>
-    </div>
-</body>
+                <section class="historial-lista">
+                    <h2>Historial Reciente</h2>
+                </section>
+            </div> 
+        </main>
+    </div> </body>
 </html>
