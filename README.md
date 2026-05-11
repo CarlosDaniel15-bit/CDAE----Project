@@ -1,7 +1,7 @@
 # CDAE----Project
 > This is a project for my collegue, is a team-work, is about a web page 
 
-## Extensions
+## Crucial extension to run the program
 > [Live Server](#-It's to give host the page and you can watch the full page)
 
 ## Extensions to link git-hub with vscode 
