@@ -13,13 +13,14 @@ body {
 
 .app-container {
     width: 100%;
-    max-width: 1000px; 
+    max-width: 1000px; /* Igual que en el registro para mantener consistencia */
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     padding: 40px 50px;
 }
 
+/* Encabezado */
 .header {
     margin-bottom: 30px;
     padding-bottom: 20px;
@@ -53,6 +54,7 @@ body {
 .header h1 { font-size: 26px; color: #333; }
 .subtitulo { color: #666; font-size: 15px; margin-left: 110px; }
 
+/* Controles Superiores (Buscador y Resumen) */
 .controles-superiores {
     display: flex;
     justify-content: space-between;
@@ -102,6 +104,7 @@ body {
 .caja-resumen p { font-size: 12px; font-weight: 600; text-transform: uppercase; opacity: 0.8; }
 .caja-resumen h3 { font-size: 22px; margin-top: 3px; }
 
+/* Historial de Pagos - Formato Tabla CSS Grid */
 .historial-lista h2 {
     font-size: 18px;
     color: #365d87;
@@ -141,6 +144,8 @@ body {
     border-left: 4px solid #e74c3c;
     background: #fffcfc;
 }
+
+/* Columnas internas de la tarjeta */
 .columna-info {
     display: flex;
     align-items: center;
@@ -183,6 +188,7 @@ body {
 .badge.pagado { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
 .badge.pendiente { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
 
+/* Botones de acción en la tabla */
 .columna-acciones {
     display: flex;
     justify-content: flex-end;
@@ -219,8 +225,9 @@ body {
 
 .btn-registrar-pago:hover { background: #c0392b; }
 
+/* 1. Layout Principal */
 .main-wrapper {
-    display: flex;
+    display: flex; /* Alinea Sidebar y Contenido de forma horizontal */
     min-height: 100vh;
     width: 100%;
 }
@@ -263,14 +270,16 @@ body {
     color: white;
 }
 
+/* 3. Ajuste del Contenido (Derecha) */
 .main-content {
-    flex: 1; 
+    flex: 1; /* Ocupa todo el espacio restante */
     background: #f0f4f8;
     padding: 40px;
     display: flex;
     justify-content: center;
 }
 
+/* Ajuste para que tu contenedor blanco no se vea gigante */
 .app-container {
     max-width: 1100px;
     width: 100%;
