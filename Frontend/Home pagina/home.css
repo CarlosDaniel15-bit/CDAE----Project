@@ -18,6 +18,7 @@ body {
     margin: 0; 
 }
 
+/* Encabezado */
 .header {
     display: flex;
     justify-content: space-between;
@@ -51,14 +52,17 @@ body {
 
 .btn-logout i { font-size: 20px; }
 
+/* Grid del Dashboard */
 .dashboard-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr; /* Divide en dos columnas */
     gap: 40px;
 }
 
+/* Títulos de sección */
 h3 { font-size: 18px; color: #555; margin-bottom: 15px; border-bottom: 1px dashed #eee; padding-bottom: 8px; }
 
+/* Tarjeta del Hijo (Destacada) */
 .hijo-card {
     background: linear-gradient(135deg, #365d87, #2c4c6e);
     color: white;
@@ -75,6 +79,7 @@ h3 { font-size: 18px; color: #555; margin-bottom: 15px; border-bottom: 1px dashe
 .hijo-card p { font-size: 16px; display: flex; align-items: center; gap: 8px; opacity: 0.9; }
 .icono-grande { font-size: 60px; opacity: 0.3; }
 
+/* Tarjeta de Próxima Clase */
 .clase-card {
     display: flex;
     align-items: center;
@@ -98,6 +103,7 @@ h3 { font-size: 18px; color: #555; margin-bottom: 15px; border-bottom: 1px dashe
 .datos-clase h4 { font-size: 18px; color: #333; margin-bottom: 5px; }
 .datos-clase p { font-size: 15px; color: #666; }
 
+/* Tarjeta de Pago */
 .pago-card.ok {
     background: #e8f5e9;
     color: #2e7d32;
@@ -135,6 +141,7 @@ h3 { font-size: 18px; color: #555; margin-bottom: 15px; border-bottom: 1px dashe
 
 .btn-agendar:hover { background: #5c7bce; transform: translateY(-2px); }
 
+/* Footer */
 footer {
     width: 100%;
     max-width: 1100px;
@@ -171,14 +178,16 @@ footer {
 .btn-instagram:hover { background: rgba(255,255,255,0.2); }
 .btn-instagram i { font-size: 24px; }
 
+/* Contenedor Maestro */
 .main-wrapper {
     display: flex;
     min-height: 100vh;
 }
 
+/* Sidebar Estilizada */
 .sidebar {
     width: 260px;
-    background: #365d87; 
+    background: #365d87; /* El azul oscuro de tu footer */
     padding: 20px;
     color: white;
     position: sticky;
@@ -217,6 +226,7 @@ footer {
     color: white;
 }
 
+/* Ajuste del Contenido Derecho */
 .main-content {
     flex: 1;
     padding: 30px;
