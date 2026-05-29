@@ -1,0 +1,157 @@
+.expediente-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.expediente-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+}
+
+.student-profile-box {
+    text-align: center;
+    border-bottom: 2px solid #f0f4f8;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.student-avatar {
+    width: 90px;
+    height: 90px;
+    background: #e0ebf7;
+    color: #365d87;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto 15px;
+    border: 3px solid #6e99c2;
+}
+
+.student-profile-box h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.tags-container {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.tag-psico {
+    background: #eef2f7;
+    color: #365d87;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Sección médica con un diseño de alerta limpio */
+.alerta-medica {
+    background: #fff5f5;
+    border-left: 4px solid #e74c3c;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.alerta-medica h4 {
+    color: #c0392b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 14px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dcdfe6;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background: #fcfdfe;
+    transition: 0.3s;
+}
+
+.form-control:focus {
+    border-color: #6e99c2;
+    outline: none;
+    box-shadow: 0 0 8px rgba(110, 153, 194, 0.2);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.grid-inputs-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.btn-guardar-expediente {
+    background: #365d87;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.btn-guardar-expediente:hover {
+    background: #284769;
+}
+
+.btn-wsp {
+    background: #2ecc71;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-wsp:hover { background: #27ae60; }
+
+@media (max-width: 900px) {
+    .expediente-grid { grid-template-columns: 1fr; }
+}
