@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Escolar - Agenda y Citas</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/Home_pagina/home.css">
+    <link rel="stylesheet" href="agenda.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <nav class="sidebar">
+            <div class="logo-details">
+                <i class='bx bxs-school'></i>
+                <span class="logo_name">Control Escolar</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html"><i class='bx bx-home-alt'></i><span>Inicio</span></a></li>
+                <li><a href="/Registro_alumno/Registro.html"><i class='bx bx-user-plus'></i><span>Registrar nuevo alumno</span></a></li>
+                <li><a href="expediente.html"><i class='bx bx-folder-open'></i><span>Expedientes</span></a></li>
+                <li class="admin-only"><a href="#"><i class='bx bx-money'></i><span>Historial de Pagos</span></a></li>
+                <li><a href="#" class="active"><i class='bx bx-calendar'></i><span>Agenda</span></a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="app-container">
+                <header class="header">
+                    <div class="saludo">
+                        <h1>Agenda de Sesiones</h1>
+                        <p>Gestión y Asignación de Horarios Diarios</p>
+                    </div>
+                    <button class="btn-logout" onclick="window.location.href='home.html'">
+                        <i class='bx bx-log-out'></i> Salir
+                    </button>
+                </header>
+
+                <div class="agenda-layout">
+                    
+                    <div class="columna-filtros">
+                        <div class="agenda-card datepicker-box">
+                            <h3><i class='bx bx-calendar-check'></i> Seleccionar Día</h3>
+                            <input type="date" class="input-fecha" id="filtro-fecha" value="2026-05-29">
+                        </div>
+
+                        <div class="agenda-card">
+                            <h4 style="font-size: 14px; margin-bottom: 12px; color: #333;">Código de Colores</h4>
+                            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <span style="width: 12px; height: 12px; background: #2ecc71; border-radius: 3px;"></span> Confirmada
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <span style="width: 12px; height: 12px; background: #f1c40f; border-radius: 3px;"></span> Pendiente de Aprobación
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <span style="width: 12px; height: 12px; background: #e74c3c; border-radius: 3px;"></span> Cancelada
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="columna-cronograma">
+                        <div class="agenda-card">
+                            <h3 style="margin-top: 0; margin-bottom: 20px; font-size: 18px; font-weight: 600; color: #333; border-bottom: 2px solid #f0f4f8; padding-bottom: 10px;">
+                                <i class='bx bx-time' style="color: #365d87; vertical-align: middle; margin-right: 5px;"></i> Distribución del Horario
+                            </h3>
+
+                            <div class="timeline-agenda">
+                                <div class="bloque-hora confirmada">
+                                    <div class="hora-texto">4:00 PM</div>
+                                    <div class="cita-info">
+                                        <div class="cita-detalles">
+                                            <h4>Luis Martínez</h4>
+                                            <p>Ayudante Asignado: Paco Paredez</p>
+                                        </div>
+                                        <div class="acciones-cita">
+                                            <button class="btn-accion-agenda x" title="Cancelar Sesión" onclick="cambiarEstado('Luis Martínez', 'cancelada')"><i class='bx bx-x'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bloque-hora pendiente">
+                                    <div class="hora-texto">5:00 PM</div>
+                                    <div class="cita-info">
+                                        <div class="cita-detalles">
+                                            <h4>Ángel Miranda</h4>
+                                            <p>Solicitado por: Laura Miranda (Madre)</p>
+                                        </div>
+                                        <div class="acciones-cita">
+                                            <button class="btn-accion-agenda check" title="Confirmar Sesión" onclick="cambiarEstado('Ángel Miranda', 'confirmada')"><i class='bx bx-check'></i></button>
+                                            <button class="btn-accion-agenda x" title="Rechazar" onclick="cambiarEstado('Ángel Miranda', 'cancelada')"><i class='bx bx-x'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bloque-hora confirmada">
+                                    <div class="hora-texto">6:00 PM</div>
+                                    <div class="cita-info">
+                                        <div class="cita-detalles">
+                                            <h4>Sofía Castro</h4>
+                                            <p>Ayudante Asignado: Nacho Villegas</p>
+                                        </div>
+                                        <div class="acciones-cita">
+                                            <button class="btn-accion-agenda x" title="Cancelar Sesión" onclick="cambiarEstado('Sofía Castro', 'cancelada')"><i class='bx bx-x'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bloque-hora cancelada">
+                                    <div class="hora-texto">7:00 PM</div>
+                                    <div class="cita-info">
+                                        <div class="cita-detalles">
+                                            <h4>Emiliano Vega</h4>
+                                            <p>Estatus: Cancelada por el Tutor</p>
+                                        </div>
+                                        <div class="acciones-cita">
+                                            <span style="font-size: 12px; color: #e74c3c; font-weight: 600;">Sin acción</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> </div>
+                    </div>
+
+                </div> </div>
+        </main>
+    </div>
+
+    <script src="agenda_funciones.js"></script>
+</body>
+</html>
