@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Escolar - Expediente Psicoeducativo</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/Home_pagina/home.css">
+    <link rel="stylesheet" href="expedientes.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <nav class="sidebar">
+            <div class="logo-details">
+                <i class='bx bxs-school'></i>
+                <span class="logo_name">Control Escolar</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html"><i class='bx bx-home-alt'></i><span>Inicio</span></a></li>
+                <li><a href="/Registro_alumno/Registro.html"><i class='bx bx-user-plus'></i><span>Registrar nuevo alumno</span></a></li>
+                <li><a href="#" class="active"><i class='bx bx-folder-open'></i><span>Expedientes</span></a></li>
+                <li class="admin-only"><a href="#"><i class='bx bx-money'></i><span>Historial de Pagos</span></a></li>
+                <li><a href="#"><i class='bx bx-calendar'></i><span>Agenda</span></a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="app-container">
+                <header class="header">
+                    <div class="saludo">
+                        <h1>Panel Administrativo</h1>
+                        <p>Expediente Integral Psicoeducativo</p>
+                    </div>
+                    <button class="btn-logout">
+                        <i class='bx bx-log-out'></i> Salir
+                    </button>
+                </header>
+
+                <div class="expediente-grid">
+                    
+                    <div class="columna-izquierda">
+                        <div class="expediente-card">
+                            <div class="student-profile-box">
+                                <div class="student-avatar">AM</div>
+                                <h2>Ángel Miranda</h2>
+                                <p style="color: #7494ec; font-weight: 600; font-size: 14px;">7 años (2° de Primaria)</p>
+                                
+                                <div class="tags-container">
+                                    <span class="tag-psico">TDAH</span>
+                                    <span class="tag-psico">Comprensión Lectora</span>
+                                </div>
+                            </div>
+
+                            <div class="contacto-tutor" style="font-size: 14px; color: #555;">
+                                <h4 style="color: #333; margin-bottom: 8px;"><i class='bx bx-user-voice'></i> Datos de Contacto</h4>
+                                <p style="margin: 4px 0;"><strong>Madre:</strong> Laura Miranda</p>
+                                <p style="margin: 4px 0;"><strong>Teléfono:</strong> 667-XXX-XXXX</p>
+                                <a href="#" class="btn-wsp"><i class='bx bxl-whatsapp'></i> Enviar Mensaje</a>
+                            </div>
+                        </div>
+
+                        <div class="expediente-card alerta-medica">
+                            <h4><i class='bx bx-first-aid'></i> Datos Médicos Relevantes</h4>
+                            <p style="margin: 0; font-size: 13px; color: #7f8c8d; line-height: 1.5;">
+                                <strong style="color: #c0392b;">Alergias:</strong> Intolerancia estricta al gluten y colorantes artificiales.<br>
+                                <strong style="color: #333; display: block; margin-top: 8px;">Medicamentos:</strong> No requiere administración de dosis durante los horarios del centro.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="columna-derecha">
+                        <div class="expediente-card">
+                            <h3 style="margin-top: 0; margin-bottom: 20px; font-size: 18px; font-weight: 600; color: #333; border-bottom: 2px solid #f0f4f8; padding-bottom: 10px;">
+                                <i class='bx bx-brain' style="color: #365d87; vertical-align: middle; margin-right: 5px;"></i> Observaciones y Evaluación Psicoeducativa
+                            </h3>
+                            
+                            <form id="form-expediente-cdae" onsubmit="procesarFormulario(event)">
+                                
+                                <div class="form-group">
+                                    <label for="txt-diagnostico">Diagnóstico Inicial / Impresión Clínica</label>
+                                    <textarea id="txt-diagnostico" class="form-control" placeholder="Describa de manera detallada el estado clínico, conducta o rezago con el que ingresa el alumno al CDAE...">El alumno ingresa presentando variaciones significativas en la atención sostenida y dificultades en el procesamiento fonológico. Muestra una actitud positiva frente a las actividades lúdicas, pero se frustra ante palabras complejas.</textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="txt-objetivos">Objetivos y Plan de Intervención Semestral</label>
+                                    <textarea id="txt-objetivos" class="form-control" placeholder="Establezca las metas específicas para las sesiones de trabajo...">1. Reforzar la segmentación silábica mediante material didáctico interactivo.
+2. Implementar pausas activas programadas cada 15 minutos para optimizar los lapsos de concentración.
+3. Estimular la autoconfianza mediante dinámicas de reforzamiento positivo.</textarea>
+                                </div>
+
+                                <div class="grid-inputs-doble">
+                                    <div class="form-group">
+                                        <label for="select-ayudante">Personal / Ayudante Asignado</label>
+                                        <select id="select-ayudante" class="form-control">
+                                            <option value="paco">Francisco Paredez (Paco)</option>
+                                            <option value="juan">Juan Pablo Flores</option>
+                                            <option value="nacho">Juan Ignacio Villegas</option>
+                                            <option value="daysi">Directora Daysi</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="select-estatus">Estatus General</label>
+                                        <select id="select-estatus" class="form-control">
+                                            <option value="activo">Activo (En Sesiones)</option>
+                                            <option value="evaluacion">En Diagnóstico / Evaluación</option>
+                                            <option value="baja">Concluido / Alta</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div style="margin-top: 10px;">
+                                    <button type="submit" class="btn-guardar-expediente">
+                                        <i class='bx bx-save'></i> Guardar Cambios en el Expediente
+                                    </button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div> </div>
+        </main>
+    </div>
+
+    <script src="exp_funciones.js"></script>
+</body>
+</html>
