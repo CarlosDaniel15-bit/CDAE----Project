@@ -1,0 +1,119 @@
+.agenda-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.agenda-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+}
+
+.datepicker-box {
+    text-align: center;
+}
+
+.datepicker-box h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.input-fecha {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dcdfe6;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+    background: #fcfdfe;
+    cursor: pointer;
+}
+
+.timeline-agenda {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bloque-hora {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    padding: 15px;
+    background: #fcfdfe;
+    border: 1px solid #eef2f7;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.bloque-hora:hover {
+    border-color: #6e99c2;
+    box-shadow: 0 3px 10px rgba(110, 153, 194, 0.1);
+}
+
+.hora-texto {
+    font-weight: 600;
+    color: #365d87;
+    font-size: 14px;
+}
+
+.cita-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    border-left: 3px solid #6e99c2;
+}
+
+.cita-detalles h4 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.cita-detalles p {
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+.bloque-hora.confirmada .cita-info { border-left-color: #2ecc71; }
+.bloque-hora.pendiente .cita-info { border-left-color: #f1c40f; }
+.bloque-hora.cancelada .cita-info { border-left-color: #e74c3c; }
+
+.acciones-cita {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-accion-agenda {
+    background: #f4f7f6;
+    border: 1px solid #dcdfe6;
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.btn-accion-agenda.check:hover { background: #e8f8f5; color: #2ecc71; border-color: #2ecc71; }
+.btn-accion-agenda.x:hover { background: #fdedec; color: #e74c3c; border-color: #e74c3c; }
+
+@media (max-width: 900px) {
+    .agenda-layout { grid-template-columns: 1fr; }
+}
