@@ -1,129 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jp ceo y nacho disque backend</title>
+    <title>Historial de Pagos</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="/inicio_sesion/inicio.css">
+    <link rel="stylesheet" href="pagos.css">
 </head>
 <body>
-    <div class="contenedor">
-        <div class="form-log_in">
-            <form action="../Home_pagina/home.html">
-                <h2>Iniciar sesion</h2>
-                <div class="input-box">
-                    <input type="text" id="correo" placeholder="Correo" required>  
-                    <i class="bx bxs-user"></i>
-                </div>
-                <div class="input-box">
-                    <input type="text" id="password" placeholder="Contraseña" required>
-                    <i class="bx bxs-lock-alt"></i>
-                </div>
-                
-                <div class="forgot-passw">
-                    <a href="#">¿Olvidaste tu Contraseña?</a>
-                </div>
-                <button type="submit" class="btn">Iniciar sesion</button>
-                <p>o inicia sesion con</p>
-                <div class="social-icons">
-                    <a href="#"><i class="bx bxl-google"></i></a>
-                    <a href="#"><i class="bx bxl-facebook"></i></a>
-                </div>
-            </form>
-        </div>
-
-        <div class="form-signup">
-            <form action="../Home_pagina/home.html">
-                <h2>Registrarse</h2>
-                <div class="input-box">
-                    <input type="text" id="nombre" placeholder="Nombre" required>
-                    <i class="bx bxs-user"></i>
-                </div>
-                <div class="input-box">
-                    <input type="email" id="correo_reg" placeholder="Email" required>
-                    <i class="bx bxs-envelope"></i>
-                </div>
-                <div class="input-box">
-                    <input type="text" id="password_reg" placeholder="Contraseña" required>
-                    <i class="bx bxs-lock-alt"></i>
-                </div>
-                
-                <button type="submit" class="btn">Registrarse</button>
-                <p>o registrate con</p>
-                <div class="social-icons">
-                    <a href="#"><i class="bx bxl-google"></i></a>
-                    <a href="#"><i class="bx bxl-facebook"></i></a>
-                </div>
-            </form>
-        </div>
-
-        <div class="toggle-box">
-            <div class="toggle-panel toggle-left">
-                <h2>Hola bienvenido</h2>
-                <p>¿No tines una cuenta?</p>
-                <button class="btn register-btn">Registrarse</button>
+    <div class="main-wrapper"> 
+        
+        <nav class="sidebar">
+            <div class="logo-details">
+                <i class='bx bxs-school'></i>
+                <span class="logo_name">Control Escolar</span>
             </div>
+            <ul class="nav-links">
+                <li><a href="/Home_pagina/home.html"><i class='bx bx-home-alt'></i><span>Inicio</span></a></li>
+                <li><a href="/Registro_alumno/Registro.html"><i class='bx bx-group'></i><span>Registrar nuevo alumno</span></a></li>
+                <li><a href="/Expedientes_alumnos/expedientes.html" class="active"><i class='bx bx-folder-open'></i><span>Expedientes</span></a></li>
+                <li><a href="/Procedimiento_pago/pagos.html" class="active"><i class='bx bx-money'></i><span>Historial de pagos</span></a></li>
+                <li><a href="/Agenda_maestra/agenda.html"><i class='bx bx-calendar'></i><span>Agenda</span></a></li>
+            </ul>
+        </nav>
 
-            <div class="toggle-panel toggle-right">
-                <h2>¡Hola!</h2>
-                <p>¿Ya tines una cuenta?</p>
-                <button class="btn login-btn">Log in</button>
-            </div>
-        </div>
-    </div>
-    
-    <script src="/inicio_sesion/script.js"></script>
-    <!-- <script>
-        document.querySelector(".form-log_in form").addEventListener("submit", function(e) {
-        e.preventDefault();
+        <main class="main-content">
+            <div class="app-container">
+                <header class="header">
+                    <div class="titulo-nav">
+                        <form action="/Home_pagina/home.html">
+                            <button class="btn-back"><i class='bx bx-chevron-left'></i> Volver</button>
+                        </form>
+                        <h1>Control y Historial de Pagos</h1>
+                    </div>
+                    <p class="subtitulo">Consulta los ingresos del mes y el estado de cuenta de cada tutor.</p>
+                </header>
 
-        const correo = document.getElementById("correo").value;
-        const password = document.getElementById("password").value;
+                <div class="controles-superiores">
+                    <div class="buscador">
+                        <i class='bx bx-search'></i>
+                        <input type="text" placeholder="Buscar alumno...">
+                    </div>
+                    
+                    <div class="resumen-pagos">
+                        <div class="caja-resumen ingresos">
+                            <i class='bx bx-trending-up'></i>
+                            <div>
+                                <p>Ingresos (Marzo)</p>
+                                <h3>$4,500</h3>
+                            </div>
+                        </div>
+                        <div class="caja-resumen pendientes">
+                            <i class='bx bx-error-circle'></i>
+                            <div>
+                                <p>Por cobrar</p>
+                                <h3>2 Pendientes</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        fetch("http://localhost:3000/login", {
-            method: "POST",
-            headers: {
-            "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ correo, password })
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (data.success) {
-            alert("Login correcto");
-            window.location.href = "../Home_pagina/home.html";
-            } else {
-            alert("Datos incorrectos");
-            }
-        });
-        });
-        </script>
-        <script>
-        document.querySelector(".form-signup form").addEventListener("submit", function(e) {
-        e.preventDefault();
-
-        const nombre = document.getElementById("nombre").value;
-        const correo = document.getElementById("correo_reg").value;
-        const password = document.getElementById("password_reg").value;
-
-        fetch("http://localhost:3000/registro", {
-            method: "POST",
-            headers: {
-            "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-            nombre: nombre,
-            correo: correo,
-            password: password
-            })
-        })
-        .then(res => res.text())
-        .then(data => {
-            alert(data);
-        });
-        });
-        </script> -->
-</body>
+                <section class="historial-lista">
+                    <h2>Historial Reciente</h2>
+                </section>
+            </div> 
+        </main>
+    </div> </body>
 </html>
