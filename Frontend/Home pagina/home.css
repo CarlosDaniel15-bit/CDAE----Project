@@ -18,7 +18,6 @@ body {
     margin: 0; 
 }
 
-/* Encabezado */
 .header {
     display: flex;
     justify-content: space-between;
@@ -226,7 +225,6 @@ footer {
     color: white;
 }
 
-/* Ajuste del Contenido Derecho */
 .main-content {
     flex: 1;
     padding: 30px;
